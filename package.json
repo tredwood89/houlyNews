@@ -1,0 +1,32 @@
+{
+  "name": "spanberger-aggregator",
+  "version": "0.1.0",
+  "scripts": {
+    "clean": "concurrently \"rimraf node_modules\" \"cd client && rimraf node_modules build\"",
+    "postinstall": "npm --prefix ./client install",
+    "heroku-postbuild": "npm run build",
+    "start": "concurrently --kill-others-on-fail \"nodemon server.js\" \"cd client && npm start\"",
+    "build": "concurrently --kill-others-on-fail \"npm run build:server\" \"npm run build:client\"",
+    "build:client": "cd client && npm run build",
+    "build:server": "babel ./server.js --ignore node_modules --out-dir build",
+    "start:prod": "node build/server.js"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.2",
+    "lodash": "^4.17.10",
+    "node-twitter-api": "^1.8.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.18.3",
+    "rimraf": "^2.6.2"
+  }
+}
