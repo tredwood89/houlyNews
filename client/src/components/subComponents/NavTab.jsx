@@ -17,7 +17,7 @@ const NavTab = ({
       className={
         `nav-link text-${color} border-${color} border-bottom-0 bg-white mr-1 ${setActiveTab(display, `${displayType}-${partyType}`)}`
       }
-      onClick={() =>
+      onClick={ () =>
         updateDisplay(displayType, partyType, query)
       }
     >

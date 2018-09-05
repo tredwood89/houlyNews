@@ -114,6 +114,41 @@ const Navbar = ({
         >
         </NavTab>
 
+        <NavTab
+          displayType="Facebook"
+          showTab={showTab}
+          showCriteria={[
+            config.demFECId,
+            config.repFECId,
+            config.demCommitteeFECId,
+            config.repCommitteeFECId,
+          ]}
+          setActiveTab={setActiveTab}
+          display={display}
+          updateDisplay={updateDisplay}
+          icon="fab fa-facebook-f"
+          color="primary"
+          partyType="DEM"
+        >
+        </NavTab>
+
+        <NavTab
+          displayType="Facebook"
+          showTab={showTab}
+          showCriteria={[
+            config.demFECId,
+            config.repFECId,
+            config.demCommitteeFECId,
+            config.repCommitteeFECId,
+          ]}
+          setActiveTab={setActiveTab}
+          display={display}
+          updateDisplay={updateDisplay}
+          icon="fab fa-facebook-f"
+          color="danger"
+          partyType="REP"
+        >
+        </NavTab>
       </ul>
     </div>;
 };

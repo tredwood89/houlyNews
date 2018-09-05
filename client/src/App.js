@@ -8,6 +8,7 @@ import Articles from './components/Articles';
 import Tweets from './components/Tweets';
 import VoteInfo from './components/VoteInfo';
 import Finances from './components/Finances';
+import Facebook from './components/Facebook'
 
 class App extends Component {
   constructor() {
@@ -38,6 +39,7 @@ class App extends Component {
   }
 
   updateDisplay(display, party, query) {
+    console.log(display, party, query);
     if (this.state.display === `${display}-${party}`) return null;
     const app = this;
     app.showLoader();
@@ -100,6 +102,7 @@ class App extends Component {
   }
 
   displayContent(display) {
+
     const { data } = this.state;
     if (display === 'loader') {
       return (<Loader></Loader>);
@@ -144,6 +147,7 @@ class App extends Component {
         <main className="container">
           <Navbar
             config={this.state.config}
+
             display={this.state.display}
             updateDisplay={this.updateDisplay}
           ></Navbar>
