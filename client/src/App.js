@@ -8,7 +8,7 @@ import Articles from './components/Articles';
 import Tweets from './components/Tweets';
 import VoteInfo from './components/VoteInfo';
 import Finances from './components/Finances';
-import Facebook from './components/Facebook'
+// import Facebook from './components/Facebook'
 
 class App extends Component {
   constructor() {

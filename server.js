@@ -131,6 +131,7 @@ app.get('/twitter/timeline', function (req, res) {
       include_rts: true,
       exclude_replies: false,
       screen_name: username,
+
     },
     TwitterAccessToken,
     TwitterAccessTokenSecret,
