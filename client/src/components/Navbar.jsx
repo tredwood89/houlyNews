@@ -114,8 +114,8 @@ const Navbar = ({
         >
         </NavTab>
 
-    {/*    <NavTab
-          displayType="Facebook"
+        <NavTab
+          displayType="Press"
           showTab={showTab}
           showCriteria={[
             config.demFECId,
@@ -126,12 +126,12 @@ const Navbar = ({
           setActiveTab={setActiveTab}
           display={display}
           updateDisplay={updateDisplay}
-          icon="fab fa-facebook-f"
+          icon="fa fa-check"
           color="primary"
           partyType="DEM"
         >
         </NavTab>
-
+{/*
         <NavTab
           displayType="Facebook"
           showTab={showTab}

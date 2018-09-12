@@ -39,15 +39,15 @@ class App extends Component {
   }
 
   updateDisplay(display, party, query) {
-    console.log(display, party, query);
-    if (this.state.display === `${display}-${party}`) return null;
+
+    // if (this.state.display === `${display}-${party}`) return null;
     const app = this;
     app.showLoader();
     this['query' + display](query)
-    .then(function ({ data }) {
+    .then(({ data }) => {
       app.setState({
         data,
-        display: `${display}-${party}`,
+        display: `${display}-${party}`
       });
     });
   }
@@ -122,10 +122,10 @@ class App extends Component {
       <div className="App">
         <nav className="navbar mb-4 d-flex app-nav-main">
           <a className="navbar-brand interactive">
-            <span className="d-none d-sm-block upper">Spanbergregator</span>
+            <span className="d-none d-sm-block upper">HoulyNews</span>
             <span className="d-sm-none"><i className="fas fa-star"></i></span>
           </a>
-          <form className="input-group w-auto" onSubmit={ target => target.preventDefault() }>
+          <form className="input-group w-auto" onSubmit={ event => event.preventDefault() }>
             <input
               name="query"
               className="form-control border-primary"
@@ -137,7 +137,7 @@ class App extends Component {
                 className="btn btn-primary"
                 onClick={() => this.updateDisplay('Press', '*', this.state.query)}
                 type="submit"
-            >
+              >
                 Search
               </button>
             </div>

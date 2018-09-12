@@ -115,7 +115,7 @@ app.get('/newsApi', function (req, res) {
   const query = req.query.q;
   axios({
     method: 'get',
-    url: `https://newsapi.org/v2/everything?q=${query}&pageSize=100&sortBy=publishedAt`,
+    url: `https://newsapi.org/v2/everything?q=${query}&pageSize=25&sortBy=publishedAt&language=en`,
     headers: {
       'x-api-key': NewsApiKey,
     },

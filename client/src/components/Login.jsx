@@ -25,6 +25,8 @@ class Login extends Component {
         loggedIn:true
       })
     } else {
+      console.dir(event.target);
+      event.target.reset()
       alert('Incorrect password')
     }
       event.preventDefault()
@@ -35,7 +37,7 @@ class Login extends Component {
       return (
         <form onSubmit={this.submitLogin}>
           <div>
-            <input type="password" name="passcode" placeholder="passcode"  onChange={this.handleChange} />
+            <input type="password" name="passcode" placeholder="passcode" onChange={this.handleChange} />
           </div>
           <input className="login"type="submit" value="Login"/>
       </form>
