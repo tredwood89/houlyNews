@@ -114,7 +114,7 @@ const Navbar = ({
         >
         </NavTab>
 
-        <NavTab
+    {/*    <NavTab
           displayType="Facebook"
           showTab={showTab}
           showCriteria={[
@@ -148,7 +148,7 @@ const Navbar = ({
           color="danger"
           partyType="REP"
         >
-        </NavTab>
+        </NavTab> */}
       </ul>
     </div>;
 };
