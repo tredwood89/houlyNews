@@ -1,6 +1,9 @@
 {
   "name": "spanberger-aggregator",
   "version": "0.1.0",
+  "engines": {
+  "node": "9.11.1",
+},
   "scripts": {
     "clean": "concurrently \"rimraf node_modules\" \"cd client && rimraf node_modules build\"",
     "postinstall": "npm --prefix ./client install",
