@@ -2,7 +2,8 @@
   "name": "spanberger-aggregator",
   "version": "0.1.0",
   "engines": {
-  "node": "9.11.1"
+  "node": "9.11.1",
+  "npm":"6.4.1"
 },
   "scripts": {
     "clean": "concurrently \"rimraf node_modules\" \"cd client && rimraf node_modules build\"",
