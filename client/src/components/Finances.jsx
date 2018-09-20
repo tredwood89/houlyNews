@@ -1,5 +1,4 @@
 import React from "react";
-import moment from "moment";
 import Finance from './Finance';
 
 const Finances = ({ data }) => {

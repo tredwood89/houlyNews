@@ -2,15 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Login from './components/Login'
 import './index.css';
-import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Route} from 'react-router-dom'
 
 ReactDOM.render(
   (
   <Router>
     <div>
-      <Route path="/login" component={Login}/>
+      <Route path="/" component={Login}/>
     </div>
   </Router>
   ),

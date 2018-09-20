@@ -4,17 +4,17 @@ import _ from 'lodash';
 
 const Tweet = ({ tweet }) => {
 
-   console.log(tweet.text);
 
-   const textFixer = function(tweet){
-     let text = tweet.text
-     let httpMatch = text.match(/http.*/,"")
-     if (httpMatch){
-       let linkString = httpMatch[0]
-       let newText = text.replace(linkString,"")
 
-     }
-   }
+   // const textFixer = function(tweet){
+   //   let text = tweet.text
+   //   let httpMatch = text.match(/http.*/,"")
+   //   if (httpMatch){
+   //     let linkString = httpMatch[0]
+   //     let newText = text.replace(linkString,"")
+   //
+   //   }
+   // }
    const httpMatchLink = function(tweet){
      let text = tweet.text
      let httpMatch = text.match(/http.*/,"")
@@ -76,7 +76,7 @@ const Tweet = ({ tweet }) => {
               return (<p>{action} <a href={link} target="_blank">{'@' + name + "'s"}</a> <a href={tweetUrl} target="_blank">tweet</a></p>)
             } else {
              return (<p>{action} <a href={link} target="_blank">{'@' + name}</a></p>)
-           };
+            }
 
         }
 
