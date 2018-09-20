@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import App from '../App';
-import login from '../log'
-
+import axios from 'axios';
 
 
 class Login extends Component {
@@ -19,17 +18,31 @@ class Login extends Component {
 
 
   submitLogin = (event) => {
+    event.preventDefault()
     let userInput = this.state.usercode
-    if (userInput === login.usercode){
-      this.setState({
-        loggedIn:true
-      })
-    } else {
-      console.dir(event.target);
-      event.target.reset()
-      alert('Incorrect password')
-    }
-      event.preventDefault()
+
+    this.checkLogin(userInput)
+    .then(({data}) => {
+      if ( data === 'correct'){
+        this.setState({
+          loggedIn:true
+        })
+      } else {
+        alert('Incorrect password')
+      }
+    })
+
+    event.target.reset()
+  }
+
+  checkLogin = (input) => {
+    return axios({
+      method: 'get',
+      url: '/pw',
+      params: {
+        input: input
+      },
+    });
   }
 
 

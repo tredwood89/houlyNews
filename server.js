@@ -17,6 +17,7 @@ const {
   TwitterAccessToken,
   TwitterAccessTokenSecret,
   PORT,
+  LoginKey,
 } = process.env;
 
 const twitter = new twitterAPI({
@@ -44,6 +45,14 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.get('/pw', function(req, res) {
+
+  if ( req.query.input === LoginKey){
+    res.send("correct")
+  } else {
+    res.send("incorrect") 
+  }
+})
 
 
 app.get('/propublica', function (req, res) {
