@@ -20,7 +20,7 @@ const Tweet = ({ tweet }) => {
      let httpMatch = text.match(/http.*/,"")
      if (httpMatch) {
        let linkString = httpMatch[0]
-       let httpLink = <a href={linkString}>View Full Tweet</a>
+       let httpLink = <a href={linkString} target="_blank">View Full Tweet</a>
        // let newText = string.replace(linkString,"")
        console.log('linkStr', linkString)
        console.log('htpLink', httpLink);
