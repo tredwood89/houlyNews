@@ -1,3 +1,10 @@
+Houly news has was cloned from the below repository.
+
+All things the same except adding a LoginKey to the .env file.
+
+HoulyNews represents Chrissy Houlahan of Pa-06
+
+
 # Spanbergregator
 
 ![Screenshot](./assets/preview.png)
@@ -93,6 +100,11 @@ TwitterConsumerKey=
 TwitterConsumerSecret=
 TwitterAccessToken=
 TwitterAccessTokenSecret=
+
+#Login ID
+
+LoginKey = 
+
 ```
 
 ### Add configs for your campaign
